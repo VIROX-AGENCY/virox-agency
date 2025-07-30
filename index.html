@@ -1,19 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Virox Agency</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virox Agency - AI SaaS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary: #00ff99;
-      --bg-dark: #0b0f1a;
-      --text-light: #f0f0f0;
-      --text-muted: #999999;
-    }
-
     * {
       margin: 0;
       padding: 0;
@@ -22,159 +14,199 @@
     }
 
     body {
-      background: var(--bg-dark);
-      color: var(--text-light);
+      background-color: #0b0b0e;
+      color: white;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     header {
-      padding: 20px 40px;
+      background: #0b0b0e;
+      padding: 20px 10%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #111827;
-      border-bottom: 1px solid #1f2937;
+      border-bottom: 1px solid #1f1f25;
     }
 
-    header .logo {
-      color: var(--primary);
+    .logo {
       font-weight: 700;
-      font-size: 1.5rem;
+      font-size: 24px;
+      color: #00ff88;
     }
 
     nav a {
       margin: 0 15px;
+      color: #ccc;
       text-decoration: none;
-      color: var(--text-light);
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ff88;
     }
 
     .hero {
+      padding: 100px 10% 60px;
       text-align: center;
-      padding: 80px 20px;
-      background: radial-gradient(circle at center, #10151f, #0b0f1a);
+      background: radial-gradient(circle at center, #1a1a1f 0%, #0b0b0e 100%);
     }
 
     .hero h1 {
-      font-size: 2.8rem;
-      margin-bottom: 20px;
+      font-size: 42px;
       font-weight: 700;
+      margin-bottom: 20px;
     }
 
     .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto 30px;
-      color: var(--text-muted);
+      color: #aaa;
+      margin-bottom: 40px;
+      font-size: 18px;
     }
 
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .buttons a {
-      padding: 12px 24px;
+    .hero .buttons a {
+      display: inline-block;
+      padding: 14px 28px;
       border-radius: 8px;
+      margin: 0 10px;
       font-weight: 600;
-      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background-color: #00ff88;
       color: #000;
     }
 
-    .get-started {
-      background: var(--primary);
+    .btn-secondary {
+      border: 2px solid #00ff88;
+      color: #00ff88;
+      background: transparent;
     }
 
-    .learn-more {
-      background: #333;
-      color: var(--text-light);
+    .features {
+      padding: 80px 10%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      background: #101015;
     }
 
-    .features, .footer {
-      padding: 60px 20px;
+    .feature {
+      background: #16161d;
+      padding: 30px;
+      border-radius: 16px;
+      border: 1px solid #222228;
+    }
+
+    .feature h3 {
+      margin-bottom: 10px;
+      color: #00ff88;
+    }
+
+    .stats {
+      padding: 60px 10%;
+      background: #0b0b0e;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
       text-align: center;
     }
 
-    .features h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+    .stat-box h2 {
+      font-size: 36px;
+      color: #00ff88;
     }
 
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .feature-card {
-      background: #111827;
-      padding: 30px;
-      border-radius: 16px;
-      color: var(--text-light);
-      border: 1px solid #1f2937;
+    .stat-box p {
+      color: #aaa;
+      font-size: 16px;
     }
 
     .footer {
-      background: #10151f;
-      color: var(--text-muted);
-      font-size: 0.9rem;
+      padding: 40px 10%;
+      text-align: center;
+      border-top: 1px solid #1f1f25;
+      background: #0b0b0e;
     }
 
-    @media screen and (max-width: 768px) {
+    .footer p {
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
       .hero h1 {
-        font-size: 2rem;
+        font-size: 28px;
       }
 
-      .buttons {
-        flex-direction: column;
-        gap: 10px;
+      .hero p {
+        font-size: 16px;
       }
     }
   </style>
 </head>
-
 <body>
+
   <header>
     <div class="logo">Virox</div>
     <nav>
-      <a href="#">Home</a>
       <a href="#features">Features</a>
+      <a href="#stats">Stats</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>The Marketing Partner Your Brand Needs</h1>
-    <p>Virox helps ambitious brands scale with high-converting digital marketing strategies, automation, and AI-driven growth.</p>
+    <h1>The AI SaaS your product needs</h1>
+    <p>Enhance your product with AI. Boost performance, scale faster, and simplify operations with Virox.</p>
     <div class="buttons">
-      <a href="#" class="get-started">Get Started</a>
-      <a href="#" class="learn-more">Learn More</a>
+      <a href="#" class="btn-primary">Get Template</a>
+      <a href="#" class="btn-secondary">Learn More</a>
     </div>
   </section>
 
-  <section class="features" id="features">
-    <h2>What We Offer</h2>
-    <div class="feature-grid">
-      <div class="feature-card">
-        <h3>High-ROI Ads</h3>
-        <p>Run smart ad campaigns that drive real results for your brand.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Funnel Building</h3>
-        <p>Get optimized funnels that convert leads into loyal customers.</p>
-      </div>
-      <div class="feature-card">
-        <h3>AI Automation</h3>
-        <p>We automate your outreach, replies, and client acquisition with precision.</p>
-      </div>
+  <section id="features" class="features">
+    <div class="feature">
+      <h3>Build Scalable AI Tools</h3>
+      <p>Easily scale your resources without worrying about limits.</p>
+    </div>
+    <div class="feature">
+      <h3>Real-Time Insights</h3>
+      <p>Make informed decisions backed by accurate data.</p>
+    </div>
+    <div class="feature">
+      <h3>Secure & Reliable</h3>
+      <p>Top-grade protection with 24/7 monitoring support.</p>
+    </div>
+    <div class="feature">
+      <h3>Global Reach</h3>
+      <p>Serve users from all continents with blazing speed.</p>
     </div>
   </section>
 
-  <footer class="footer">
+  <section id="stats" class="stats">
+    <div class="stat-box">
+      <h2>90%</h2>
+      <p>Efficiency Boost with Virox Tools</p>
+    </div>
+    <div class="stat-box">
+      <h2>1M+</h2>
+      <p>Data points analyzed per day</p>
+    </div>
+    <div class="stat-box">
+      <h2>99.9%</h2>
+      <p>Uptime guaranteed</p>
+    </div>
+    <div class="stat-box">
+      <h2>Global</h2>
+      <p>Clients from 20+ countries</p>
+    </div>
+  </section>
+
+  <footer class="footer" id="contact">
     <p>&copy; 2025 Virox Agency. All rights reserved.</p>
   </footer>
-</body>
 
+</body>
 </html>
