@@ -135,6 +135,31 @@
             border: none;
             cursor: pointer;
         }
+
+        .forum-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 2rem;
+            gap: 1.5rem;
+        }
+
+        .forum-box {
+            background: #1a1a1a;
+            padding: 1.5rem;
+            border-radius: 8px;
+            width: 280px;
+            text-align: left;
+        }
+
+        .forum-box h4 {
+            color: #10ff8b;
+            margin-bottom: 0.5rem;
+        }
+
+        .forum-box p {
+            color: #aaa;
+        }
     </style>
 </head>
 
@@ -182,6 +207,24 @@
     <section class="section dark" id="forum">
         <h2>Community Forum</h2>
         <p>Connect with brand owners, marketers & creators inside our exclusive Virox forum.</p>
+        <div class="forum-boxes">
+            <div class="forum-box">
+                <h4>🔥 Growth Tactics</h4>
+                <p>Learn how others are scaling fast using our strategies.</p>
+            </div>
+            <div class="forum-box">
+                <h4>📊 Analytics & Funnels</h4>
+                <p>Discuss optimization and conversion wins with the tribe.</p>
+            </div>
+            <div class="forum-box">
+                <h4>🎥 Content Feedback</h4>
+                <p>Post your reels/carousels for peer review & feedback.</p>
+            </div>
+            <div class="forum-box">
+                <h4>🧠 Mindset & Grind</h4>
+                <p>Daily push from creators hustling like you. No fluff, all results.</p>
+            </div>
+        </div>
     </section>
 
     <section class="section" id="testimonials">
