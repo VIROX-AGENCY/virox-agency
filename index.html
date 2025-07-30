@@ -1,186 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virox Agency</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Virox Agency</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0e0e10;
-      color: #ffffff;
-    }
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(120deg, #1e1e2f, #2e054e);
+        color: white;
+        scroll-behavior: smooth;
+      }
 
-    header {
-      background: #1f1f21;
-      padding: 20px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+      header {
+        padding: 2rem;
+        text-align: center;
+        background: linear-gradient(270deg, #9d00ff, #ff008c, #9d00ff);
+        background-size: 600% 600%;
+        animation: gradientMove 10s ease infinite;
+      }
 
-    header h1 {
-      margin: 0;
-      color: #f72585;
-      font-size: 2rem;
-    }
+      @keyframes gradientMove {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
 
-    nav a {
-      color: #ffffff;
-      margin: 0 15px;
-      text-decoration: none;
-    }
+      header h1 {
+        font-size: 3rem;
+      }
 
-    .hero-section {
-      background: linear-gradient(270deg, #8e2de2, #4a00e0);
-      background-size: 400% 400%;
-      animation: gradientShift 10s ease infinite;
-      padding: 100px 20px;
-      text-align: center;
-    }
+      header p {
+        margin-top: 0.5rem;
+        font-size: 1.2rem;
+        color: #eee;
+      }
 
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+      section {
+        padding: 4rem 2rem;
+        text-align: center;
+      }
 
-    .hero-title {
-      font-size: 2.5rem;
-      color: white;
-    }
+      .btn {
+        background: #ff00b7;
+        padding: 1rem 2rem;
+        border: none;
+        color: white;
+        font-size: 1rem;
+        margin-top: 2rem;
+        border-radius: 8px;
+        cursor: pointer;
+      }
 
-    .hero-subtitle {
-      font-size: 1.2rem;
-      color: #dcdcdc;
-      margin-top: 10px;
-    }
+      .btn:hover {
+        background: #ff33c8;
+      }
 
-    .hero-btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: #f72585;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      text-decoration: none;
-    }
+      form input, form textarea {
+        width: 100%;
+        max-width: 400px;
+        padding: 1rem;
+        margin: 0.5rem auto;
+        display: block;
+        border-radius: 5px;
+        border: none;
+      }
 
-    .hero-btn:hover {
-      transform: scale(1.05);
-      background-color: #ff4081;
-    }
+      footer {
+        background: #111;
+        padding: 2rem;
+        text-align: center;
+        color: #aaa;
+      }
 
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+      @media (min-width: 768px) {
+        header h1 {
+          font-size: 4rem;
+        }
+        section {
+          padding: 6rem 4rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Virox Agency</h1>
+      <p>We Build Brands that Convert</p>
+    </header>
 
-    .section-title {
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 40px;
-      color: #f72585;
-    }
+    <section data-aos="fade-up">
+      <h2>Why Choose Us</h2>
+      <p>Creative. Data-Driven. Proven Results.</p>
+      <button class="btn" onclick="document.location='#forum'">Get Free Strategy Call</button>
+    </section>
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
+    <section id="forum" data-aos="fade-up">
+      <h2>Book Your Free Strategy Call</h2>
+      <form action="https://formspree.io/f/meozzqre" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button class="btn" type="submit">Submit</button>
+      </form>
+    </section>
 
-    input, textarea {
-      padding: 10px;
-      font-size: 1rem;
-      border-radius: 6px;
-      border: none;
-    }
+    <footer>
+      <p>&copy; 2025 Virox Agency. All rights reserved.</p>
+    </footer>
 
-    button {
-      padding: 12px;
-      background-color: #f72585;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #ff4081;
-    }
-
-    footer {
-      background: #1f1f21;
-      color: #aaa;
-      text-align: center;
-      padding: 20px;
-    }
-  </style>
-</head>
-
-<body>
-  <header>
-    <h1>Virox Agency</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#forum">Forum</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <section class="hero-section">
-    <div data-aos="fade-up">
-      <h1 class="hero-title">Grow Your Brand with <span style="color:#f72585;">Virox Agency</span></h1>
-      <p class="hero-subtitle">We help brands scale fast with performance-driven marketing.</p>
-      <a href="#forum" class="hero-btn">Get Free Strategy</a>
-    </div>
-  </section>
-
-  <section id="about">
-    <h2 class="section-title">About Us</h2>
-    <p data-aos="fade-right">Virox is a high-performance marketing agency helping businesses grow through creative digital strategies. Whether you're a startup or established brand, we help you scale fast.</p>
-  </section>
-
-  <section id="services">
-    <h2 class="section-title">Our Services</h2>
-    <ul data-aos="fade-up">
-      <li>📈 Performance Marketing</li>
-      <li>💡 Brand Strategy</li>
-      <li>🎯 Paid Ads (Meta, Google, YouTube)</li>
-      <li>📱 Social Media Growth</li>
-      <li>🌐 Website Design & Funnels</li>
-    </ul>
-  </section>
-
-  <section id="forum">
-    <h2 class="section-title">Free Growth Forum</h2>
-    <p data-aos="fade-up">Drop your details and we’ll send a customized strategy to grow your brand.</p>
-    <form action="https://formspree.io/f/meozzqre" method="POST" data-aos="fade-up">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="4" placeholder="Tell us about your business" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Virox Agency. All rights reserved.</p>
-  </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
