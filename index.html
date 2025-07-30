@@ -2,210 +2,242 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Virox Agency – Power Your Business Growth</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-    body {
-      background-color: #0f0f0f;
-      color: #f0f0f0;
-      line-height: 1.6;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      background-color: #111;
-      border-bottom: 1px solid #222;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #ccc;
-      font-weight: 500;
-    }
-    nav a:hover {
-      color: #1aff8c;
-    }
-    .hero {
-      text-align: center;
-      padding: 100px 20px 60px;
-      background: linear-gradient(to bottom, #111, #0f0f0f);
-    }
-    .hero h1 {
-      font-size: 48px;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-    .hero p {
-      max-width: 600px;
-      margin: 0 auto 30px;
-      color: #aaa;
-    }
-    .hero button {
-      background: #1aff8c;
-      border: none;
-      padding: 14px 28px;
-      margin: 0 10px;
-      color: #000;
-      font-weight: 600;
-      cursor: pointer;
-      border-radius: 6px;
-    }
-    .features, .forum, .clients, .stats, .cta, .footer {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .features-grid, .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-    .feature-card, .stat-card {
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      border: 1px solid #222;
-    }
-    .feature-card h3, .stat-card h3 {
-      margin-bottom: 10px;
-      font-size: 20px;
-      color: #1aff8c;
-    }
-    .forum, .clients {
-      background-color: #111;
-      border-radius: 12px;
-      padding: 40px;
-      margin: 40px 0;
-    }
-    .footer {
-      text-align: center;
-      font-size: 14px;
-      color: #666;
-    }
-    @media(max-width: 768px) {
-      .hero h1 { font-size: 32px; }
-      .hero p { font-size: 16px; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virox Agency – Marketing Simplified</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0d0d0d;
+            color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+            background: #111;
+        }
+
+        header h1 {
+            color: #10ff8b;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: bold;
+        }
+
+        .hero {
+            padding: 6rem 2rem;
+            text-align: center;
+            background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: auto;
+            color: #aaa;
+        }
+
+        .button-group {
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 1rem;
+        }
+
+        .btn-primary {
+            background: #10ff8b;
+            color: black;
+        }
+
+        .btn-secondary {
+            background: #333;
+            color: white;
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .section.dark {
+            background-color: #111;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        footer {
+            padding: 2rem;
+            text-align: center;
+            background: #0f0f0f;
+            color: #aaa;
+        }
+
+        .faq-item {
+            text-align: left;
+            margin: 1rem 0;
+        }
+
+        .faq-item h4 {
+            margin-bottom: 0.5rem;
+            color: #10ff8b;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin: 1rem 0;
+            background: #1a1a1a;
+            border: none;
+            color: white;
+            border-radius: 5px;
+        }
+
+        form button {
+            background: #10ff8b;
+            color: black;
+            padding: 1rem 2rem;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
-  <header>
-    <h2>Virox</h2>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#services">Services</a>
-      <a href="#forum">Forum</a>
-      <a href="#clients">Clients</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <header>
+        <h1>Virox</h1>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#forum">Forum</a>
+            <a href="#testimonials">Clients</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-  <section class="hero">
-    <h1>Dominate The Digital World With Virox</h1>
-    <p>We help startups, creators, and local businesses grow with world-class digital marketing campaigns powered by results, not guesses.</p>
-    <button>Get Started</button>
-    <button>Learn More</button>
-  </section>
+    <section class="hero">
+        <h2>Grow Your Brand with Virox</h2>
+        <p>The AI-powered marketing agency that helps you scale faster, smarter, and more efficiently than ever.</p>
+        <div class="button-group">
+            <button class="btn btn-primary">Get Started</button>
+            <button class="btn btn-secondary">Explore Features</button>
+        </div>
+    </section>
 
-  <section class="features">
-    <h2 style="text-align:center;margin-bottom:40px;">Our Capabilities</h2>
-    <div class="features-grid">
-      <div class="feature-card">
-        <h3>Performance Ads</h3>
-        <p>Run ROI-driven ad campaigns on Meta, Google & more.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Branding & Design</h3>
-        <p>Professional logos, reels, content and identity building.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Social Media Growth</h3>
-        <p>Turn your IG page into a client-getting machine.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Funnels & Landing Pages</h3>
-        <p>Convert leads faster with optimized landing pages.</p>
-      </div>
-    </div>
-  </section>
+    <section class="section dark" id="features">
+        <h2>What We Offer</h2>
+        <div class="grid">
+            <div class="card">Done-For-You Reels & Carousels</div>
+            <div class="card">AI Content Strategy</div>
+            <div class="card">Lead Generation Campaigns</div>
+            <div class="card">Sales Funnel Setup</div>
+        </div>
+    </section>
 
-  <section class="stats">
-    <h2 style="text-align:center;margin-bottom:40px;">Performance Metrics</h2>
-    <div class="stats-grid">
-      <div class="stat-card">
-        <h3>90% ROI</h3>
-        <p>Clients see massive ad return within 30 days.</p>
-      </div>
-      <div class="stat-card">
-        <h3>500+ Creatives</h3>
-        <p>Created high-converting assets that sell like crazy.</p>
-      </div>
-      <div class="stat-card">
-        <h3>30+ Clients</h3>
-        <p>Agencies, coaches & businesses already trust us.</p>
-      </div>
-    </div>
-  </section>
+    <section class="section" id="stats">
+        <h2>Performance Stats</h2>
+        <div class="grid">
+            <div class="card">100+ Clients Served</div>
+            <div class="card">10x Average ROI</div>
+            <div class="card">Verified Growth Case Studies</div>
+        </div>
+    </section>
 
-  <section class="forum" id="forum">
-    <h2 style="text-align:center;margin-bottom:20px;">Community Forum</h2>
-    <p style="text-align:center;max-width:600px;margin:auto;margin-bottom:40px;">Join our Virox Inner Circle where agency owners and marketers share insights, wins, and client-attracting strategies — updated daily!</p>
-    <div class="features-grid">
-      <div class="feature-card">
-        <h3>🔥 Trending Topics</h3>
-        <p>Stay ahead with latest strategies in digital marketing.</p>
-      </div>
-      <div class="feature-card">
-        <h3>🤝 Peer Mentorship</h3>
-        <p>Get help from those walking the same path as you.</p>
-      </div>
-    </div>
-  </section>
+    <section class="section dark" id="forum">
+        <h2>Community Forum</h2>
+        <p>Connect with brand owners, marketers & creators inside our exclusive Virox forum.</p>
+    </section>
 
-  <section class="clients" id="clients">
-    <h2 style="text-align:center;margin-bottom:20px;">Client Love</h2>
-    <p style="text-align:center;max-width:600px;margin:auto;margin-bottom:40px;">From coaches to gyms, salons to creators — our clients say one thing in common: Virox delivers results, not promises.</p>
-    <div class="features-grid">
-      <div class="feature-card">
-        <h3>"100 leads in 7 days!"</h3>
-        <p>- Arjun, Gym Owner</p>
-      </div>
-      <div class="feature-card">
-        <h3>"My IG page went viral!"</h3>
-        <p>- Sana, Beauty Brand</p>
-      </div>
-      <div class="feature-card">
-        <h3>"Tripled course sales"</h3>
-        <p>- Rahul, Online Coach</p>
-      </div>
-    </div>
-  </section>
+    <section class="section" id="testimonials">
+        <h2>Client Wins</h2>
+        <div class="grid">
+            <div class="card">“We scaled our fitness brand in 6 weeks with Virox’s systems.” – Rahul, FitAlpha</div>
+            <div class="card">“Finally an agency that does more than talk.” – Priya, GlamoGlow</div>
+        </div>
+    </section>
 
-  <section class="cta">
-    <h2 style="text-align:center;margin-bottom:20px;">Ready to Grow?</h2>
-    <p style="text-align:center;max-width:600px;margin:auto;margin-bottom:40px;">Book your free consultation today and let’s build a powerful online brand together.</p>
-    <div style="text-align:center;">
-      <button>Book Free Call</button>
-    </div>
-  </section>
+    <section class="section dark" id="pricing">
+        <h2>Our Packages</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Starter</h3>
+                <p>₹1499/mo</p>
+                <p>Basic content pack + Strategy calls</p>
+            </div>
+            <div class="card">
+                <h3>Pro</h3>
+                <p>₹2999/mo</p>
+                <p>Weekly content + Ads + Funnel</p>
+            </div>
+            <div class="card">
+                <h3>Elite</h3>
+                <p>Custom</p>
+                <p>Full-stack service + Priority support</p>
+            </div>
+        </div>
+    </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Virox Agency. All rights reserved.</p>
-  </footer>
+    <section class="section" id="faq">
+        <h2>FAQs</h2>
+        <div class="faq-item">
+            <h4>Do you work with new businesses?</h4>
+            <p>Yes, we love working with startups and scaling them fast with high-ROI marketing.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Is content creation included?</h4>
+            <p>100%. Our team handles creative, voiceovers, and editing for reels and carousels.</p>
+        </div>
+    </section>
+
+    <section class="section dark" id="contact">
+        <h2>Let's Work Together</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Virox Agency. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
