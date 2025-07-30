@@ -1,141 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Virox Agency</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="icon" href="https://img.icons8.com/color/96/rocket.png" />
-  </head>
-  <body class="bg-white text-gray-900">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Virox Agency</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .gradient-text {
+      background: linear-gradient(to right, #9D00FF, #FF00A0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-24">
-      <div class="max-w-6xl mx-auto px-4 text-center">
-        <h1 class="text-4xl md:text-6xl font-bold mb-4" data-aos="fade-up">Virox Agency</h1>
-        <p class="text-lg md:text-2xl mb-6" data-aos="fade-up" data-aos-delay="100">We build brands that grow fast. Digital marketing done right 🚀</p>
-        <a href="#contact" class="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition">Work With Us</a>
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+    <img src="logo.png" alt="Virox Logo" class="h-10" />
+    <nav class="space-x-6 hidden md:block">
+      <a href="#services" class="text-gray-700 hover:text-purple-600">Services</a>
+      <a href="#pricing" class="text-gray-700 hover:text-purple-600">Pricing</a>
+      <a href="#blog" class="text-gray-700 hover:text-purple-600">Blog</a>
+      <a href="#contact" class="text-gray-700 hover:text-purple-600">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="bg-gradient-to-r from-purple-600 via-pink-500 to-magenta-600 text-white text-center py-20" data-aos="fade-down">
+  <h1 class="text-5xl font-extrabold mb-4">Virox Digital Agency</h1>
+  <p class="text-lg max-w-2xl mx-auto">We help businesses go viral online using data-backed strategies, creativity, and performance marketing. Let your brand shine!</p>
+  <a href="#contact" class="inline-block mt-8 px-6 py-3 bg-white text-purple-700 font-semibold rounded-md shadow-md hover:bg-gray-100">Let’s Talk</a>
+</section>
+
+<section class="py-20 bg-gray-50" id="services">
+  <div class="max-w-5xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-12 gradient-text" data-aos="fade-up">What We Do</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div data-aos="fade-up" class="bg-white p-6 rounded-lg shadow hover:shadow-xl">
+        <h3 class="text-xl font-semibold mb-2 text-purple-600">Social Media Growth</h3>
+        <p>We create scroll-stopping content and growth strategies to explode your online presence.</p>
       </div>
-    </section>
-
-    <!-- Services -->
-    <section class="py-16 bg-white" id="services">
-      <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">What We Offer 🔥</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="text-center p-6 rounded-xl shadow hover:shadow-lg transition" data-aos="zoom-in">
-            <img src="https://img.icons8.com/color/96/social-media.png" class="mx-auto mb-4" />
-            <h3 class="text-xl font-semibold mb-2">Social Media Growth</h3>
-            <p>We create viral reels, high-converting posts & full Instagram strategy.</p>
-          </div>
-          <div class="text-center p-6 rounded-xl shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="100">
-            <img src="https://img.icons8.com/color/96/commercial.png" class="mx-auto mb-4" />
-            <h3 class="text-xl font-semibold mb-2">Content Marketing</h3>
-            <p>Build trust with your audience through powerful content designed to convert.</p>
-          </div>
-          <div class="text-center p-6 rounded-xl shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="200">
-            <img src="https://img.icons8.com/color/96/marketing.png" class="mx-auto mb-4" />
-            <h3 class="text-xl font-semibold mb-2">Ad Campaigns</h3>
-            <p>Scale fast with high-ROI Instagram & YouTube ad campaigns.</p>
-          </div>
-        </div>
+      <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-6 rounded-lg shadow hover:shadow-xl">
+        <h3 class="text-xl font-semibold mb-2 text-pink-600">Performance Ads</h3>
+        <p>We run ROI-driven ads that convert clicks into customers across Meta, Google & more.</p>
       </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="bg-[#f8f8ff] py-16" id="testimonials">
-      <div class="max-w-5xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-12" data-aos="fade-up">Client Love 💬</h2>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-white p-6 rounded-xl shadow-md" data-aos="fade-up">
-            <p>"Virox helped us go from 0 to 10k followers in 30 days. Unreal results!"</p>
-            <h4 class="mt-4 font-semibold">— @coachalpha</h4>
-          </div>
-          <div class="bg-white p-6 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
-            <p>"Their ad creatives and strategies 3x’d our lead gen in a week."</p>
-            <h4 class="mt-4 font-semibold">— Salon Luxe</h4>
-          </div>
-        </div>
+      <div data-aos="fade-up" data-aos-delay="200" class="bg-white p-6 rounded-lg shadow hover:shadow-xl">
+        <h3 class="text-xl font-semibold mb-2 text-magenta-600">Brand Identity</h3>
+        <p>We design bold branding, logos, and messaging that your audience remembers forever.</p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- Pricing Section -->
-    <section class="bg-[#eef2ff] py-16" id="pricing">
-      <div class="max-w-5xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-10" data-aos="fade-up">Transparent Pricing 💼</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="bg-white p-6 rounded-xl shadow-lg" data-aos="zoom-in">
-            <h3 class="text-xl font-semibold mb-2">Starter</h3>
-            <p class="text-2xl font-bold mb-4">₹4,999/mo</p>
-            <ul class="text-left space-y-2 mb-4">
-              <li>✅ 5 Posts / Week</li>
-              <li>✅ Basic Strategy</li>
-              <li>✅ Instagram Growth</li>
-            </ul>
-            <a href="#contact" class="bg-purple-600 text-white px-4 py-2 rounded-full">Get Started</a>
-          </div>
-          <div class="bg-white p-6 rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="100">
-            <h3 class="text-xl font-semibold mb-2">Growth</h3>
-            <p class="text-2xl font-bold mb-4">₹9,999/mo</p>
-            <ul class="text-left space-y-2 mb-4">
-              <li>✅ 10 Posts / Week</li>
-              <li>✅ Paid Ads + Strategy</li>
-              <li>✅ Monthly Reports</li>
-            </ul>
-            <a href="#contact" class="bg-purple-600 text-white px-4 py-2 rounded-full">Grow Now</a>
-          </div>
-          <div class="bg-white p-6 rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="200">
-            <h3 class="text-xl font-semibold mb-2">Ultimate</h3>
-            <p class="text-2xl font-bold mb-4">₹14,999/mo</p>
-            <ul class="text-left space-y-2 mb-4">
-              <li>✅ Full Branding + Ads</li>
-              <li>✅ Dedicated Manager</li>
-              <li>✅ 24/7 Support</li>
-            </ul>
-            <a href="#contact" class="bg-purple-600 text-white px-4 py-2 rounded-full">Dominate</a>
-          </div>
-        </div>
+<section class="py-20 bg-white" id="pricing">
+  <div class="max-w-5xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-12 gradient-text" data-aos="fade-up">Our Packages</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div data-aos="zoom-in" class="border p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-bold mb-2 text-purple-600">Starter</h3>
+        <p class="text-4xl font-bold mb-4">₹4,999</p>
+        <ul class="text-left mb-4 space-y-2">
+          <li>✅ 5 Custom Posts</li>
+          <li>✅ Basic Growth Strategy</li>
+          <li>✅ 1 Ad Campaign</li>
+        </ul>
+        <a href="#contact" class="block bg-purple-600 text-white py-2 rounded hover:bg-purple-700">Get Started</a>
       </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section class="bg-white py-16" id="blog">
-      <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Virox Blog 🧠</h2>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-gray-100 p-6 rounded-xl shadow" data-aos="fade-up">
-            <h3 class="text-xl font-semibold mb-2">How to 10x Your Instagram in 30 Days</h3>
-            <p class="text-gray-600">We break down the exact strategies we use to grow clients fast — no fluff.</p>
-          </div>
-          <div class="bg-gray-100 p-6 rounded-xl shadow" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="text-xl font-semibold mb-2">Content That Converts: The Formula</h3>
-            <p class="text-gray-600">You don’t need to go viral, you need to be smart. Learn what actually works.</p>
-          </div>
-        </div>
+      <div data-aos="zoom-in" data-aos-delay="100" class="border p-6 rounded-lg shadow-md bg-gray-50">
+        <h3 class="text-xl font-bold mb-2 text-pink-600">Pro</h3>
+        <p class="text-4xl font-bold mb-4">₹9,999</p>
+        <ul class="text-left mb-4 space-y-2">
+          <li>✅ 12 Custom Posts</li>
+          <li>✅ Full Growth Plan</li>
+          <li>✅ 3 Ad Campaigns</li>
+        </ul>
+        <a href="#contact" class="block bg-pink-600 text-white py-2 rounded hover:bg-pink-700">Get Pro</a>
       </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="bg-[#f9fafb] py-16" id="contact">
-      <div class="max-w-xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Let’s Work Together 🤝</h2>
-        <form action="https://formsubmit.co/your@email.com" method="POST" class="space-y-4" data-aos="fade-up" data-aos-delay="100">
-          <input type="text" name="name" placeholder="Your Name" class="w-full border p-3 rounded" required />
-          <input type="email" name="email" placeholder="Email" class="w-full border p-3 rounded" required />
-          <textarea name="message" rows="4" placeholder="Your Message" class="w-full border p-3 rounded" required></textarea>
-          <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700 transition">Send Message</button>
-        </form>
+      <div data-aos="zoom-in" data-aos-delay="200" class="border p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-bold mb-2 text-magenta-600">Premium</h3>
+        <p class="text-4xl font-bold mb-4">₹14,999</p>
+        <ul class="text-left mb-4 space-y-2">
+          <li>✅ Unlimited Posts</li>
+          <li>✅ Dedicated Manager</li>
+          <li>✅ Paid Ad Mastery</li>
+        </ul>
+        <a href="#contact" class="block bg-magenta-600 text-white py-2 rounded hover:bg-magenta-700">Go Premium</a>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/919999999999" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:scale-110 transition">
-      💬
-    </a>
+<section class="py-20 bg-gray-100" id="blog">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-8 gradient-text" data-aos="fade-up">Our Insights</h2>
+    <div class="space-y-8">
+      <div data-aos="fade-right">
+        <h3 class="text-xl font-semibold text-purple-700">📈 Why Every Local Business Needs a Strong Online Presence</h3>
+        <p class="text-gray-700 mt-2">Digital visibility is no longer optional. We break down how even small businesses can dominate online.</p>
+      </div>
+      <div data-aos="fade-left">
+        <h3 class="text-xl font-semibold text-pink-700">🎯 Growth Hacks That Actually Work in 2025</h3>
+        <p class="text-gray-700 mt-2">Tired of fake strategies? Here’s our proven 3-step formula to 10x reach organically.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
-  </body>
+<section class="bg-white py-16" id="contact">
+  <div class="max-w-2xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-10 gradient-text" data-aos="fade-up">Let’s Grow Together</h2>
+    <form action="https://formsubmit.co/YOUR-EMAIL-HERE" method="POST" class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-2 border rounded-md">
+      <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-2 border rounded-md">
+      <textarea name="message" placeholder="Your Message" rows="5" required class="w-full px-4 py-2 border rounded-md"></textarea>
+      <button type="submit" class="bg-purple-600 text-white px-6 py-2 rounded-md hover:bg-purple-700">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<a href="https://wa.me/919876543210" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg z-50 hover:bg-green-600" target="_blank">
+  💬
+</a>
+
+<footer class="bg-gray-900 text-white py-6 text-center">
+  <p>&copy; 2025 Virox Agency. All rights reserved.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+</script>
+</body>
 </html>
-
