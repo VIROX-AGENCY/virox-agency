@@ -3,212 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Virox Agency</title>
+  <title>Virox Agency – Grow With Us</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    body {
-      background-color: #0f0f0f;
-      color: #ffffff;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    .accent {
-      color: #ffce57;
-    }
-    .btn-primary {
-      background-color: #ffce57;
-      color: #0f0f0f;
-      padding: 12px 28px;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-    .btn-primary:hover {
-      background-color: #e6b84f;
-    }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
-<script>
-  const form = document.getElementById("contact-form");
-  const status = document.getElementById("form-status");
-
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
-    const data = new FormData(form);
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: data,
-      headers: {
-        Accept: "application/json",
-      },
-    });
-
-    if (response.ok) {
-      status.innerHTML = "✅ Thanks! Your message has been sent.";
-      form.reset();
-    } else {
-      status.innerHTML = "❌ Oops! There was a problem. Try again later.";
-    }
-  });
-</script>
-<script>
-  const form = document.getElementById("contact-form");
-  const status = document.getElementById("form-status");
-
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
-    const data = new FormData(form);
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: data,
-      headers: {
-        Accept: "application/json",
-      },
-    });
-
-    if (response.ok) {
-      status.innerHTML = "✅ Thanks! Your message has been sent.";
-      form.reset();
-    } else {
-      status.innerHTML = "❌ Oops! There was a problem. Try again later.";
-    }
-  });
-</script>
-
-  <body class="text-white">
-
-  <!-- Navbar -->
-  <header class="w-full px-6 py-4 flex justify-between items-center bg-black fixed top-0 z-50 shadow-lg">
-    <h1 class="text-2xl font-bold"><span class="accent">Virox</span> Agency</h1>
-    <nav class="space-x-6 hidden md:block">
-      <a href="#about" class="hover:text-gray-400">About</a>
-      <a href="#services" class="hover:text-gray-400">Services</a>
-      <a href="#results" class="hover:text-gray-400">Results</a>
-      <a href="#contact" class="hover:text-gray-400">Contact</a>
-    </nav>
-  </header>
-<!-- Contact Section -->
-<section id="contact" class="py-24 px-6 bg-gradient-to-r from-purple-900 to-pink-800 text-white text-center">
-  <div class="max-w-3xl mx-auto">
-    <h2 class="text-4xl font-bold mb-4">Let’s Work Together</h2>
-    <p class="mb-10 text-lg">Have a serious project in mind? Fill this out — we usually reply within 24 hours.</p>
-
-    <form action="https://formspree.io/f/meozzqre" method="POST" class="space-y-5 text-left" id="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-white" />
-      
-      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-white" />
-      
-      <textarea name="message" rows="5" placeholder="Your Message" required class="w-full p-3 rounded bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-white"></textarea>
-      
-      <button type="submit" class="w-full bg-white text-black font-bold py-3 px-6 rounded-lg hover:bg-gray-200 transition-all duration-200">
-        Send Message
-      </button>
-
-      <!-- Status Message -->
-      <p id="form-status" class="text-green-300 font-semibold pt-3"></p>
-    </form>
-  </div>
-</section>
-
+<body class="bg-black text-white font-sans">
   <!-- Hero Section -->
-  <section class="min-h-screen flex items-center justify-center px-8 pt-24 text-center bg-gradient-to-b from-black to-gray-900">
-    <div class="max-w-3xl">
-      <h2 class="text-5xl md:text-6xl font-extrabold leading-tight">
-        We Don’t Run Ads.<br />
-        <span class="accent">We Build Brands.</span>
-      </h2>
-      <p class="mt-6 text-lg text-gray-300">Virox helps business owners scale to 6 & 7 figures through ROI-focused digital marketing. We don’t do guesswork. We do performance.</p>
-      <a href="#contact" class="btn-primary mt-10 inline-block">Book a Free Strategy Call</a>
+  <section class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-purple-800 to-pink-600 text-center px-6">
+    <h1 class="text-5xl font-bold mb-4">Welcome to <span class="text-yellow-400">Virox Agency</span></h1>
+    <p class="text-xl mb-8">We scale brands with bold marketing strategies.</p>
+    <a href="#contact" class="bg-white text-black py-3 px-6 rounded-full font-semibold hover:bg-gray-200 transition">🚀 Free Strategy Call</a>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-20 px-6 bg-gray-900 text-center">
+    <h2 class="text-4xl font-bold mb-10 text-pink-400">What We Do</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-6 bg-gray-800 rounded-xl shadow-md">
+        <h3 class="text-xl font-bold text-yellow-300 mb-2">Paid Ads</h3>
+        <p>Maximize ROI with targeted Facebook & Google Ads.</p>
+      </div>
+      <div class="p-6 bg-gray-800 rounded-xl shadow-md">
+        <h3 class="text-xl font-bold text-yellow-300 mb-2">Branding</h3>
+        <p>Create a brand identity that speaks and sells.</p>
+      </div>
+      <div class="p-6 bg-gray-800 rounded-xl shadow-md">
+        <h3 class="text-xl font-bold text-yellow-300 mb-2">Funnel Design</h3>
+        <p>Build high-converting sales funnels for massive growth.</p>
+      </div>
     </div>
   </section>
-<!-- Services Section -->
-<section id="services" class="py-20 px-6 bg-gray-950">
-  <div class="max-w-5xl mx-auto text-center">
-    <h2 class="text-4xl font-bold mb-4">What We Do</h2>
-    <p class="text-gray-400 mb-12">We're not your typical agency. We focus on performance, not pretty promises.</p>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-      <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transform transition">
-        <h3 class="text-xl font-semibold accent mb-3">Paid Ads</h3>
-        <p class="text-sm text-gray-400">We create laser-targeted ad campaigns on Facebook, Instagram, and Google that generate real ROI.</p>
-      </div>
-      <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transform transition">
-        <h3 class="text-xl font-semibold accent mb-3">Funnel Building</h3>
-        <p class="text-sm text-gray-400">High-converting landing pages designed to turn cold traffic into paying customers.</p>
-      </div>
-      <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transform transition">
-        <h3 class="text-xl font-semibold accent mb-3">Email + Retargeting</h3>
-        <p class="text-sm text-gray-400">We don’t just bring leads. We follow up, nurture, and close them for you.</p>
-      </div>
+
+  <!-- CTA Section -->
+  <section class="py-20 px-6 bg-black text-white text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-4xl font-bold mb-4">Ready to Grow Your Brand?</h2>
+      <p class="mb-8 text-lg">Book your <strong>Free Strategy Call</strong> with us today and let’s scale your business together.</p>
+      <a href="#contact" class="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-pink-500 hover:to-purple-600 transition duration-300 text-white font-semibold py-3 px-6 rounded-lg">
+        🚀 Free Strategy Call
+      </a>
     </div>
-  </div>
-</section>
-<!-- Call to Action Section -->
-<section id="contact" class="py-24 px-6 bg-gradient-to-r from-purple-900 to-pink-800 text-center text-white">
-  <div class="max-w-3xl mx-auto">
-    <h2 class="text-4xl font-bold mb-4">Ready to Scale?</h2>
-    <p class="mb-8 text-lg">If you're serious about growing your business — we’re ready to make it happen.</p>
-    <a href="mailto:viroxagency@gmail.com" class="bg-white text-black font-bold py-3 px-8 rounded-lg shadow hover:bg-gray-200 transition-all duration-200">Book Your Free Strategy Call</a>
-  </div>
-</section>
-<!-- CTA Section -->
-<section class="py-20 px-6 bg-black text-white text-center">
-  <div class="max-w-2xl mx-auto">
-    <h2 class="text-4xl font-bold mb-4">Ready to Grow Your Brand?</h2>
-    <p class="mb-8 text-lg">Book a free strategy call with our experts today and let’s scale your business online.</p>
-    <a href="#contact" class="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-pink-600 hover:to-purple-600 transition-all duration-300 text-white font-semibold py-3 px-6 rounded-lg inline-block">
-      🚀 Free Strategy Call
-    </a>
-  </div>
-</section>
+  </section>
 
-<!-- Footer -->
-<footer class="bg-black py-6 px-4 text-center text-gray-500 text-sm">
-  <p>&copy; 2025 Virox Agency. All rights reserved.</p>
-  <p>Made with ⚡ by Virox Team</p>
-</footer>
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 px-6 bg-gradient-to-r from-purple-900 to-pink-800 text-white text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-4xl font-bold mb-4">Let’s Work Together</h2>
+      <p class="mb-10 text-lg">Have a serious project in mind? Fill this out — we'll respond within 24 hours.</p>
 
-<!-- Tailwind CDN for live preview -->
-<script src="https://cdn.tailwindcss.com"></script>
-<!-- Contact Section -->
-<section id="contact" class="py-24 px-6 bg-gradient-to-r from-purple-900 to-pink-800 text-white text-center">
-  <div class="max-w-3xl mx-auto">
-    <h2 class="text-4xl font-bold mb-4">Let’s Work Together</h2>
-    <p class="mb-10 text-lg">Have a serious project in mind? Fill this out — we usually reply within 24 hours.</p>
-
-    <form action="https://formspree.io/f/meozzqre" method="POST" class="space-y-5 text-left" id="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-white" />
-      
-      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-white" />
-      
-      <textarea name="message" rows="5" placeholder="Your Message" required class="w-full p-3 rounded bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-white"></textarea>
-      
-      <button type="submit" class="w-full bg-white text-black font-bold py-3 px-6 rounded-lg hover:bg-gray-200 transition-all duration-200">
-        Send Message
-      </button>
-
-      <!-- Status Message -->
-      <p id="form-status" class="text-green-300 font-semibold pt-3"></p>
-    </form>
-  </div>
-</section>
-
-<!-- Results Section -->
-<section id="results" class="py-20 px-6 bg-black">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-4xl font-bold mb-4">Proven Results</h2>
-    <p class="text-gray-400 mb-10">We’ve scaled brands from scratch to ₹10L+ per month — without burning ad spend.</p>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-      <div class="bg-gray-900 p-5 rounded-lg shadow">
-        <h4 class="text-xl accent mb-2">Fitness Brand</h4>
-        <p class="text-gray-400 text-sm">From ₹0 to ₹6L/month in 90 days with paid ads + content funnel.</p>
-      </div>
-      <div class="bg-gray-900 p-5 rounded-lg shadow">
-        <h4 class="text-xl accent mb-2">Online Coach</h4>
-        <p class="text-gray-400 text-sm">4X ROAS from organic + retargeting strategy in 60 days.</p>
-      </div>
-      <div class="bg-gray-900 p-5 rounded-lg shadow">
-        <h4 class="text-xl accent mb-2">Local Gym</h4>
-        <p class="text-gray-400 text-sm">Generated 120+ leads in 30 days with a lead-gen funnel and follow-up system.</p>
-      </div>
+      <form action="https://formspree.io/f/meozzqre" method="POST" class="space-y-5 text-left" id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-white" />
+        <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-white" />
+        <textarea name="message" rows="5" placeholder="Your Message" required class="w-full p-3 rounded bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-white"></textarea>
+        <button type="submit" class="w-full bg-white text-black font-bold py-3 px-6 rounded-lg hover:bg-gray-200 transition duration-200">
+          Send Message
+        </button>
+        <p id="form-status" class="text-green-300 font-semibold pt-3"></p>
+      </form>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-center py-6 text-sm text-gray-500">
+    © 2025 Virox Agency. All rights reserved.
+  </footer>
+
+  <!-- Formspree Handler Script -->
+  <script>
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("form-status");
+
+    form.addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { Accept: "application/json" }
+      });
+
+      if (response.ok) {
+        status.textContent = "✅ Thanks! Your message has been sent.";
+        form.reset();
+      } else {
+        status.textContent = "❌ Oops! There was a problem. Try again later.";
+      }
+    });
+  </script>
+</body>
+</html>
