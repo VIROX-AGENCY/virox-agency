@@ -2,78 +2,235 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Virox Agency</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Montserrat', sans-serif;
+    }
+
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #6a11cb, #2575fc);
+      background: #0f0f11;
       color: white;
     }
-    .section {
-      padding: 80px 20px;
-      max-width: 1200px;
-      margin: auto;
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 60px;
+      background-color: #0f0f11;
     }
-    .glass {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      padding: 40px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+
+    header h1 {
+      font-size: 32px;
+      color: #ff00cc;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff00cc;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 120px 20px;
+      text-align: center;
+      background: linear-gradient(145deg, #1f0036, #0f0f11);
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      color: #cccccc;
+      font-size: 18px;
+    }
+
+    .hero a {
+      margin-top: 30px;
+      padding: 12px 30px;
+      background: #ff00cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .hero a:hover {
+      background: #d100aa;
+    }
+
+    section {
+      padding: 100px 60px;
+    }
+
+    .section-title {
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 60px;
+      color: #ff00cc;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 40px;
+    }
+
+    .service-card {
+      background: #1a1a1f;
+      padding: 30px;
+      border-radius: 12px;
+      width: 300px;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .service-card h3 {
+      color: #fff;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #aaa;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    input, textarea {
+      padding: 15px;
+      border: none;
+      border-radius: 8px;
+      background: #222;
+      color: white;
+    }
+
+    button {
+      background: #ff00cc;
+      border: none;
+      padding: 15px;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #0a0a0c;
+      padding: 30px 60px;
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <section class="section text-center" data-aos="fade-up">
-    <h1 class="text-5xl font-extrabold mb-4">Grow Your Brand with <span class="text-yellow-300">Virox</span></h1>
-    <p class="text-xl text-gray-200 max-w-xl mx-auto">We build stunning digital strategies to scale your business fast. Done-for-you marketing with real results.</p>
-    <a href="#contact" class="mt-8 inline-block px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-300 transition">Get Free Strategy Call</a>
+  <header data-aos="fade-down">
+    <h1>Virox.</h1>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="#strategy">Free Strategy</a>
+    </nav>
+  </header>
+
+  <section class="hero" data-aos="fade-up">
+    <h2>We Scale Brands, Fast.</h2>
+    <p>We help bold businesses dominate online using high-converting funnels, viral ads, and next-gen strategies.</p>
+    <a href="#strategy">Get Free Strategy Call</a>
   </section>
 
-  <!-- Services -->
-  <section class="section glass text-center" data-aos="zoom-in">
-    <h2 class="text-3xl font-bold mb-6">What We Do</h2>
-    <div class="grid md:grid-cols-3 gap-10 text-left">
-      <div>
-        <h3 class="text-xl font-semibold">Social Media Marketing</h3>
-        <p class="text-gray-300 mt-2">We create scroll-stopping content to build authority and bring leads.</p>
+  <section id="services" data-aos="fade-up">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>Social Media Marketing</h3>
+        <p>We craft content and strategies that turn followers into loyal buyers.</p>
       </div>
-      <div>
-        <h3 class="text-xl font-semibold">Paid Ads</h3>
-        <p class="text-gray-300 mt-2">ROI-focused Facebook and Instagram ad campaigns.</p>
+      <div class="service-card">
+        <h3>Funnel Building</h3>
+        <p>High-converting sales funnels tailored to your audience and product.</p>
       </div>
-      <div>
-        <h3 class="text-xl font-semibold">Brand Strategy</h3>
-        <p class="text-gray-300 mt-2">Position your business like a luxury brand that stands out.</p>
+      <div class="service-card">
+        <h3>Paid Advertising</h3>
+        <p>We run laser-targeted ads that drive results — not just clicks.</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section text-center" data-aos="fade-up">
-    <h2 class="text-3xl font-bold mb-6">Let's Work Together</h2>
-    <form action="https://formspree.io/f/meozzqre" method="POST" class="max-w-xl mx-auto space-y-4">
-      <input type="text" name="name" required placeholder="Your Name" class="w-full p-4 rounded-md bg-white text-black placeholder-gray-700" />
-      <input type="email" name="email" required placeholder="Your Email" class="w-full p-4 rounded-md bg-white text-black placeholder-gray-700" />
-      <textarea name="message" required placeholder="Your Message" class="w-full p-4 rounded-md bg-white text-black placeholder-gray-700 h-40"></textarea>
-      <button type="submit" class="w-full bg-yellow-300 text-black font-bold py-3 rounded-md hover:bg-yellow-400 transition">Send Message</button>
+  <section id="contact" data-aos="fade-up">
+    <h2 class="section-title">Contact Us</h2>
+    <form action="https://formspree.io/f/meozzqre" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
     </form>
   </section>
 
-  <!-- Footer -->
-  <footer class="text-center py-6 text-sm text-gray-300">
-    &copy; 2025 Virox Agency. All rights reserved.
+  <section id="strategy" data-aos="fade-up">
+    <h2 class="section-title">Free Strategy Call</h2>
+    <form action="https://formspree.io/f/meozzqre" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <textarea name="project" rows="4" placeholder="Tell us about your brand"></textarea>
+      <button type="submit">Book Strategy Session</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Virox Agency. All rights reserved.
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000 });
   </script>
+
 </body>
 </html>
