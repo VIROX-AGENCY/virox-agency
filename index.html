@@ -2,74 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Virox Agency – Elevate Your Brand</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virox Agency</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Segoe UI', sans-serif; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+    }
+    .section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
   </style>
 </head>
-<body class="bg-gradient-to-br from-purple-900 via-purple-800 to-pink-800 text-white">
+<body>
 
-<header class="text-center py-20 px-6" data-aos="fade-up">
-  <h1 class="text-5xl font-bold mb-4">Virox Agency</h1>
-  <p class="text-xl mb-8">We grow brands with elite marketing strategies.</p>
-  <a href="#contact" class="bg-white text-black font-semibold py-3 px-6 rounded-lg hover:bg-gray-200 transition">
-    Free Strategy Call
-  </a>
-</header>
+  <!-- Hero Section -->
+  <section class="section text-center" data-aos="fade-up">
+    <h1 class="text-5xl font-extrabold mb-4">Grow Your Brand with <span class="text-yellow-300">Virox</span></h1>
+    <p class="text-xl text-gray-200 max-w-xl mx-auto">We build stunning digital strategies to scale your business fast. Done-for-you marketing with real results.</p>
+    <a href="#contact" class="mt-8 inline-block px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-300 transition">Get Free Strategy Call</a>
+  </section>
 
-<section class="px-8 py-16" data-aos="fade-up">
-  <h2 class="text-3xl font-bold text-center mb-10">What We Do</h2>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <div class="bg-purple-700 rounded-xl p-6 shadow-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="100">
-      <h3 class="text-xl font-semibold mb-2">Social Media Marketing</h3>
-      <p>We create scroll-stopping content and run ads that convert followers into buyers.</p>
+  <!-- Services -->
+  <section class="section glass text-center" data-aos="zoom-in">
+    <h2 class="text-3xl font-bold mb-6">What We Do</h2>
+    <div class="grid md:grid-cols-3 gap-10 text-left">
+      <div>
+        <h3 class="text-xl font-semibold">Social Media Marketing</h3>
+        <p class="text-gray-300 mt-2">We create scroll-stopping content to build authority and bring leads.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold">Paid Ads</h3>
+        <p class="text-gray-300 mt-2">ROI-focused Facebook and Instagram ad campaigns.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold">Brand Strategy</h3>
+        <p class="text-gray-300 mt-2">Position your business like a luxury brand that stands out.</p>
+      </div>
     </div>
-    <div class="bg-purple-700 rounded-xl p-6 shadow-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="200">
-      <h3 class="text-xl font-semibold mb-2">Brand Strategy</h3>
-      <p>We position your business like a top-tier brand that customers trust and love.</p>
-    </div>
-    <div class="bg-purple-700 rounded-xl p-6 shadow-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="300">
-      <h3 class="text-xl font-semibold mb-2">Website Creation</h3>
-      <p>We build sleek, high-converting websites that impress and perform.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="text-center py-20 px-6" data-aos="fade-up">
-  <h2 class="text-3xl font-bold mb-6">Ready to grow?</h2>
-  <a href="#contact" class="bg-white text-black font-semibold py-3 px-8 rounded-full hover:bg-gray-300 transition">
-    Book Your Free Strategy Call
-  </a>
-</section>
+  <!-- Contact -->
+  <section id="contact" class="section text-center" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-6">Let's Work Together</h2>
+    <form action="https://formspree.io/f/meozzqre" method="POST" class="max-w-xl mx-auto space-y-4">
+      <input type="text" name="name" required placeholder="Your Name" class="w-full p-4 rounded-md bg-white text-black placeholder-gray-700" />
+      <input type="email" name="email" required placeholder="Your Email" class="w-full p-4 rounded-md bg-white text-black placeholder-gray-700" />
+      <textarea name="message" required placeholder="Your Message" class="w-full p-4 rounded-md bg-white text-black placeholder-gray-700 h-40"></textarea>
+      <button type="submit" class="w-full bg-yellow-300 text-black font-bold py-3 rounded-md hover:bg-yellow-400 transition">Send Message</button>
+    </form>
+  </section>
 
-<section id="contact" class="px-6 py-20 bg-purple-900" data-aos="zoom-in-up">
-  <h2 class="text-3xl font-bold text-center mb-10">Contact Us</h2>
-  <form action="https://formspree.io/f/meozzqre" method="POST" class="max-w-xl mx-auto space-y-6">
-    <input type="text" name="name" required placeholder="Your Name"
-           class="w-full p-4 rounded-md bg-purple-700 text-white border border-purple-400" />
-    <input type="email" name="email" required placeholder="Your Email"
-           class="w-full p-4 rounded-md bg-purple-700 text-white border border-purple-400" />
-    <textarea name="message" required placeholder="Your Message"
-              class="w-full p-4 rounded-md bg-purple-700 text-white border border-purple-400 h-40"></textarea>
-    <button type="submit"
-            class="w-full bg-white text-black font-semibold py-3 rounded-md hover:bg-gray-200 transition">
-      Send Message
-    </button>
-  </form>
-</section>
+  <!-- Footer -->
+  <footer class="text-center py-6 text-sm text-gray-300">
+    &copy; 2025 Virox Agency. All rights reserved.
+  </footer>
 
-<footer class="text-center py-10 text-sm bg-purple-800">
-  <p>&copy; 2025 Virox Agency. Built for impact.</p>
-</footer>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({ duration: 1000 });
-</script>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+  </script>
 </body>
 </html>
