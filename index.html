@@ -1,124 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Virox Agency</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
 
-      body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(120deg, #1e1e2f, #2e054e);
-        color: white;
-        scroll-behavior: smooth;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virox Agency</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-      header {
-        padding: 2rem;
-        text-align: center;
-        background: linear-gradient(270deg, #9d00ff, #ff008c, #9d00ff);
-        background-size: 600% 600%;
-        animation: gradientMove 10s ease infinite;
-      }
+<body class="bg-[#0f0f1a] text-white">
 
-      @keyframes gradientMove {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-      }
+  <!-- Hero Section -->
+  <section class="text-center py-20 px-6 md:px-16 bg-gradient-to-b from-[#1b1b2f] to-[#0f0f1a]">
+    <h1 data-aos="fade-down" class="text-5xl md:text-6xl font-bold leading-tight mb-6">We Grow Brands Like <span class="text-purple-500">Fire</span></h1>
+    <p data-aos="fade-up" class="text-lg text-gray-400 max-w-2xl mx-auto mb-8">Virox is the performance marketing agency that turns scrolls into sales using paid ads, UGC, and funnel strategy. Simple, smart, and scalable.</p>
+    <a href="#contact" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300">Book Free Strategy Call</a>
+  </section>
 
-      header h1 {
-        font-size: 3rem;
-      }
+  <!-- Why Choose Us Section -->
+  <section id="why-choose-us" class="py-20 px-6 md:px-16 bg-gradient-to-b from-[#1b1b2f] to-[#0f0f1a] text-white">
+    <div data-aos="fade-up" class="max-w-5xl mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">Why Choose <span class="text-purple-500">Virox</span>?</h2>
+      <p class="text-lg mb-10 text-gray-300">We're not just a digital agency — we're your growth partner.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-[#22223b] p-6 rounded-2xl shadow-md hover:scale-105 transition duration-300">
+          <h3 class="text-xl font-semibold text-magenta-400 mb-2">⚡ Results-Driven</h3>
+          <p class="text-gray-400">We focus on leads, revenue, and brand growth — not vanity metrics.</p>
+        </div>
+        <div class="bg-[#22223b] p-6 rounded-2xl shadow-md hover:scale-105 transition duration-300">
+          <h3 class="text-xl font-semibold text-magenta-400 mb-2">📈 Performance Marketing</h3>
+          <p class="text-gray-400">Ads, funnels, content — all built for measurable success.</p>
+        </div>
+        <div class="bg-[#22223b] p-6 rounded-2xl shadow-md hover:scale-105 transition duration-300">
+          <h3 class="text-xl font-semibold text-magenta-400 mb-2">💡 Premium Strategy</h3>
+          <p class="text-gray-400">Each client gets a tailored roadmap designed by growth experts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      header p {
-        margin-top: 0.5rem;
-        font-size: 1.2rem;
-        color: #eee;
-      }
-
-      section {
-        padding: 4rem 2rem;
-        text-align: center;
-      }
-
-      .btn {
-        background: #ff00b7;
-        padding: 1rem 2rem;
-        border: none;
-        color: white;
-        font-size: 1rem;
-        margin-top: 2rem;
-        border-radius: 8px;
-        cursor: pointer;
-      }
-
-      .btn:hover {
-        background: #ff33c8;
-      }
-
-      form input, form textarea {
-        width: 100%;
-        max-width: 400px;
-        padding: 1rem;
-        margin: 0.5rem auto;
-        display: block;
-        border-radius: 5px;
-        border: none;
-      }
-
-      footer {
-        background: #111;
-        padding: 2rem;
-        text-align: center;
-        color: #aaa;
-      }
-
-      @media (min-width: 768px) {
-        header h1 {
-          font-size: 4rem;
-        }
-        section {
-          padding: 6rem 4rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Virox Agency</h1>
-      <p>We Build Brands that Convert</p>
-    </header>
-
-    <section data-aos="fade-up">
-      <h2>Why Choose Us</h2>
-      <p>Creative. Data-Driven. Proven Results.</p>
-      <button class="btn" onclick="document.location='#forum'">Get Free Strategy Call</button>
-    </section>
-
-    <section id="forum" data-aos="fade-up">
-      <h2>Book Your Free Strategy Call</h2>
-      <form action="https://formspree.io/f/meozzqre" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button class="btn" type="submit">Submit</button>
+  <!-- Forum Section -->
+  <section id="forum" class="py-20 px-6 md:px-16 bg-[#111827] text-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12" data-aos="fade-up">Let’s Talk Growth</h2>
+      <form action="https://formspree.io/f/meozzqre" method="POST" class="grid gap-6 md:grid-cols-2">
+        <input type="text" name="name" placeholder="Your Name" class="p-4 rounded-lg bg-[#1f2937] border border-gray-600 text-white" required>
+        <input type="email" name="email" placeholder="Your Email" class="p-4 rounded-lg bg-[#1f2937] border border-gray-600 text-white" required>
+        <textarea name="message" placeholder="Tell us about your project..." class="p-4 rounded-lg bg-[#1f2937] border border-gray-600 text-white md:col-span-2" rows="5" required></textarea>
+        <button type="submit" class="bg-purple-600 hover:bg-purple-700 transition text-white font-bold py-3 px-6 rounded-lg md:col-span-2">Send Message</button>
       </form>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-      <p>&copy; 2025 Virox Agency. All rights reserved.</p>
-    </footer>
+  <script>
+    AOS.init();
+  </script>
+</body>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-  </body>
 </html>
