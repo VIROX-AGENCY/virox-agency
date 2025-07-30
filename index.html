@@ -5,63 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Virox Agency – Elevate Your Brand</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', sans-serif; }
   </style>
 </head>
-<body class="bg-gradient-to-br from-purple-900 via-purple-800 to-pink-800 text-white font-sans">
+<body class="bg-gradient-to-br from-purple-900 via-purple-800 to-pink-800 text-white">
 
-<!-- Hero Section -->
-<header class="text-center py-20 px-6">
+<header class="text-center py-20 px-6" data-aos="fade-up">
   <h1 class="text-5xl font-bold mb-4">Virox Agency</h1>
-  <p class="text-xl mb-8">We help brands grow with stunning strategies & digital presence.</p>
+  <p class="text-xl mb-8">We grow brands with elite marketing strategies.</p>
   <a href="#contact" class="bg-white text-black font-semibold py-3 px-6 rounded-lg hover:bg-gray-200 transition">
     Free Strategy Call
   </a>
 </header>
-<!-- Services Section -->
-<section class="py-16 px-6 text-center">
-  <h2 class="text-3xl font-bold mb-10">What We Do Best</h2>
+
+<section class="px-8 py-16" data-aos="fade-up">
+  <h2 class="text-3xl font-bold text-center mb-10">What We Do</h2>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <div class="bg-purple-700 rounded-xl p-6 shadow-lg">
-      <h3 class="text-xl font-semibold mb-2">Social Media Growth</h3>
-      <p class="text-sm">We turn your Instagram, YouTube, and LinkedIn into lead-generating machines.</p>
+    <div class="bg-purple-700 rounded-xl p-6 shadow-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="100">
+      <h3 class="text-xl font-semibold mb-2">Social Media Marketing</h3>
+      <p>We create scroll-stopping content and run ads that convert followers into buyers.</p>
     </div>
-    <div class="bg-purple-700 rounded-xl p-6 shadow-lg">
-      <h3 class="text-xl font-semibold mb-2">Content Strategy</h3>
-      <p class="text-sm">Reels, carousels & storytelling that makes people stop scrolling and take action.</p>
+    <div class="bg-purple-700 rounded-xl p-6 shadow-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="200">
+      <h3 class="text-xl font-semibold mb-2">Brand Strategy</h3>
+      <p>We position your business like a top-tier brand that customers trust and love.</p>
     </div>
-    <div class="bg-purple-700 rounded-xl p-6 shadow-lg">
-      <h3 class="text-xl font-semibold mb-2">Client Acquisition</h3>
-      <p class="text-sm">Get more appointments and scale your revenue with proven digital systems.</p>
+    <div class="bg-purple-700 rounded-xl p-6 shadow-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="300">
+      <h3 class="text-xl font-semibold mb-2">Website Creation</h3>
+      <p>We build sleek, high-converting websites that impress and perform.</p>
     </div>
   </div>
 </section>
-<!-- CTA Section -->
-<section class="py-16 px-6 text-center bg-pink-700">
-  <h2 class="text-3xl font-bold mb-4">Ready to Grow?</h2>
-  <p class="mb-6">Book your free strategy session and let’s dominate your niche.</p>
-  <a href="#contact" class="bg-white text-black font-semibold py-3 px-6 rounded-lg hover:bg-gray-200 transition">
-    Book Now
+
+<section class="text-center py-20 px-6" data-aos="fade-up">
+  <h2 class="text-3xl font-bold mb-6">Ready to grow?</h2>
+  <a href="#contact" class="bg-white text-black font-semibold py-3 px-8 rounded-full hover:bg-gray-300 transition">
+    Book Your Free Strategy Call
   </a>
 </section>
-<!-- Contact Section -->
-<section id="contact" class="py-16 px-6 text-center">
-  <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
-  <form action="https://formspree.io/f/meozzqre" method="POST" class="max-w-md mx-auto space-y-4">
-    <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-2 rounded bg-white text-black" />
-    <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-2 rounded bg-white text-black" />
-    <textarea name="message" placeholder="Your Message" required class="w-full px-4 py-2 rounded bg-white text-black"></textarea>
-    <button type="submit" class="bg-white text-black font-semibold py-2 px-6 rounded hover:bg-gray-200 transition">Send Message</button>
+
+<section id="contact" class="px-6 py-20 bg-purple-900" data-aos="zoom-in-up">
+  <h2 class="text-3xl font-bold text-center mb-10">Contact Us</h2>
+  <form action="https://formspree.io/f/meozzqre" method="POST" class="max-w-xl mx-auto space-y-6">
+    <input type="text" name="name" required placeholder="Your Name"
+           class="w-full p-4 rounded-md bg-purple-700 text-white border border-purple-400" />
+    <input type="email" name="email" required placeholder="Your Email"
+           class="w-full p-4 rounded-md bg-purple-700 text-white border border-purple-400" />
+    <textarea name="message" required placeholder="Your Message"
+              class="w-full p-4 rounded-md bg-purple-700 text-white border border-purple-400 h-40"></textarea>
+    <button type="submit"
+            class="w-full bg-white text-black font-semibold py-3 rounded-md hover:bg-gray-200 transition">
+      Send Message
+    </button>
   </form>
 </section>
 
-<!-- Thank You Message Script -->
+<footer class="text-center py-10 text-sm bg-purple-800">
+  <p>&copy; 2025 Virox Agency. Built for impact.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  const query = new URLSearchParams(window.location.search);
-  if (query.has("success")) {
-    alert("✅ Thanks for reaching out! We'll contact you shortly.");
-  }
+  AOS.init({ duration: 1000 });
 </script>
 
 </body>
