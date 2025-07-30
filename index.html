@@ -50,6 +50,29 @@
     }
   });
 </script>
+<script>
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      status.innerHTML = "✅ Thanks! Your message has been sent.";
+      form.reset();
+    } else {
+      status.innerHTML = "❌ Oops! There was a problem. Try again later.";
+    }
+  });
+</script>
 
   <body class="text-white">
 
@@ -126,6 +149,16 @@
     <a href="mailto:viroxagency@gmail.com" class="bg-white text-black font-bold py-3 px-8 rounded-lg shadow hover:bg-gray-200 transition-all duration-200">Book Your Free Strategy Call</a>
   </div>
 </section>
+<!-- CTA Section -->
+<section class="py-20 px-6 bg-black text-white text-center">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="text-4xl font-bold mb-4">Ready to Grow Your Brand?</h2>
+    <p class="mb-8 text-lg">Book a free strategy call with our experts today and let’s scale your business online.</p>
+    <a href="#contact" class="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-pink-600 hover:to-purple-600 transition-all duration-300 text-white font-semibold py-3 px-6 rounded-lg inline-block">
+      🚀 Free Strategy Call
+    </a>
+  </div>
+</section>
 
 <!-- Footer -->
 <footer class="bg-black py-6 px-4 text-center text-gray-500 text-sm">
@@ -135,6 +168,28 @@
 
 <!-- Tailwind CDN for live preview -->
 <script src="https://cdn.tailwindcss.com"></script>
+<!-- Contact Section -->
+<section id="contact" class="py-24 px-6 bg-gradient-to-r from-purple-900 to-pink-800 text-white text-center">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-4xl font-bold mb-4">Let’s Work Together</h2>
+    <p class="mb-10 text-lg">Have a serious project in mind? Fill this out — we usually reply within 24 hours.</p>
+
+    <form action="https://formspree.io/f/meozzqre" method="POST" class="space-y-5 text-left" id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-white" />
+      
+      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-white" />
+      
+      <textarea name="message" rows="5" placeholder="Your Message" required class="w-full p-3 rounded bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-white"></textarea>
+      
+      <button type="submit" class="w-full bg-white text-black font-bold py-3 px-6 rounded-lg hover:bg-gray-200 transition-all duration-200">
+        Send Message
+      </button>
+
+      <!-- Status Message -->
+      <p id="form-status" class="text-green-300 font-semibold pt-3"></p>
+    </form>
+  </div>
+</section>
 
 <!-- Results Section -->
 <section id="results" class="py-20 px-6 bg-black">
