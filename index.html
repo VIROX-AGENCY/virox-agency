@@ -2,131 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Virox Agency</title>
-  <meta name="description" content="Virox Agency - Viral Marketing & Social Media Growth Experts">
-  <meta name="keywords" content="marketing agency, digital marketing, Instagram growth, virox agency">
-  <meta name="author" content="Virox Agency">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
   <style>
-    html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; }
-    .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.6s ease; }
-    .fade-in.visible { opacity: 1; transform: none; }
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
   </style>
 </head>
+<body class="bg-gray-50 text-gray-900">
 
-<body class="bg-white text-gray-800">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-20 text-center">
+    <h1 class="text-4xl font-bold mb-4">We Help Brands Grow Online 🚀</h1>
+    <p class="text-lg mb-6">Marketing that delivers ROI. Branding that converts.</p>
+    <a href="#contact" class="bg-white text-indigo-600 px-6 py-3 rounded-full font-semibold">Get Started</a>
+  </section>
 
-<!-- Floating WhatsApp -->
-<a href="https://wa.me/917810077437" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-full shadow-lg transition">
-  💬 Chat on WhatsApp
-</a>
-
-<!-- Navbar -->
-<header class="sticky top-0 z-40 bg-white shadow-md">
-  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-    <h1 class="text-2xl font-bold text-indigo-600">Virox Agency</h1>
-    <nav class="space-x-6 text-sm font-semibold text-gray-600">
-      <a href="#services" class="hover:text-indigo-600">Services</a>
-      <a href="#work" class="hover:text-indigo-600">Work</a>
-      <a href="#about" class="hover:text-indigo-600">About</a>
-      <a href="#contact" class="hover:text-indigo-600">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<!-- Hero -->
-<section class="bg-gradient-to-br from-indigo-600 to-blue-500 text-white py-32 text-center px-6 fade-in">
-  <h2 class="text-5xl font-extrabold mb-4">Grow Your Brand With Virox 🚀</h2>
-  <p class="text-lg max-w-2xl mx-auto mb-6">We help creators, startups, and brands go viral and profitable with smart content + strategy.</p>
-  <a href="#contact" class="bg-white text-indigo-600 px-8 py-3 rounded-full text-lg font-semibold shadow hover:bg-gray-100 transition">Let’s Work Together</a>
-</section>
-
-<!-- Services -->
-<section id="services" class="py-20 px-6 bg-gray-50 text-center fade-in">
-  <h2 class="text-3xl font-bold mb-10">Our Services</h2>
-  <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold mb-2">Instagram Growth</h3>
-      <p>We scale your page organically and with viral reels to gain real followers.</p>
-    </div>
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold mb-2">Paid Ad Campaigns</h3>
-      <p>We run Meta & Google ads that drive clicks, leads, and ROI.</p>
-    </div>
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold mb-2">Content & Video Creation</h3>
-      <p>Scripts, hooks, edits — we create scroll-stopping content.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Work Showcase -->
-<section id="work" class="py-20 px-6 bg-white text-center fade-in">
-  <h2 class="text-3xl font-bold mb-10">Our Work</h2>
-  <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-    <div class="rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-      <img src="https://dummyimage.com/600x400/ddd/fff&text=Project+1" alt="">
-      <div class="p-4 text-left">
-        <h3 class="font-semibold text-lg">0 to 10K Followers</h3>
-        <p class="text-sm text-gray-500">Viral strategy for a coach in 3 weeks</p>
+  <!-- Services -->
+  <section class="py-16" id="services">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">What We Do</h2>
+      <div class="grid md:grid-cols-3 gap-10" data-aos="fade-up">
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold mb-2">Social Media Growth</h3>
+          <p>We help you go viral on Instagram, LinkedIn, and more.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold mb-2">Content Creation</h3>
+          <p>Get premium reels, carousels, and scripts that convert views into leads.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold mb-2">Performance Ads</h3>
+          <p>Run smart ad campaigns that actually bring paying clients.</p>
+        </div>
       </div>
     </div>
-    <div class="rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-      <img src="https://dummyimage.com/600x400/ddd/fff&text=Project+2" alt="">
-      <div class="p-4 text-left">
-        <h3 class="font-semibold text-lg">4X ROAS with Meta Ads</h3>
-        <p class="text-sm text-gray-500">Fitness product campaign</p>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="bg-white py-16" id="testimonials">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">What Our Clients Say</h2>
+      <div class="space-y-8" data-aos="fade-up">
+        <div class="p-6 bg-gray-100 rounded-xl">
+          <p>"Virox doubled our Instagram followers in 2 weeks! Super professional team."</p>
+          <p class="mt-2 font-semibold">– Rahul, Fitness Coach</p>
+        </div>
+        <div class="p-6 bg-gray-100 rounded-xl">
+          <p>"Their content strategy is fire! I closed 3 leads just from one carousel."</p>
+          <p class="mt-2 font-semibold">– Sneha, Life Coach</p>
+        </div>
       </div>
     </div>
-    <div class="rounded-xl overflow-hidden shadow hover:shadow-xl transition">
-      <img src="https://dummyimage.com/600x400/ddd/fff&text=Project+3" alt="">
-      <div class="p-4 text-left">
-        <h3 class="font-semibold text-lg">Brand Design Refresh</h3>
-        <p class="text-sm text-gray-500">Modern visuals for a skincare startup</p>
-      </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-gray-100 py-16">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Let's Work Together</h2>
+      <form action="https://formsubmit.co/viroxagency@gmail.com.com" method="POST" class="space-y-4" data-aos="fade-up">
+        <input type="text" name="name" required placeholder="Your Name" class="w-full p-3 rounded border border-gray-300">
+        <input type="email" name="email" required placeholder="Your Email" class="w-full p-3 rounded border border-gray-300">
+        <textarea name="message" required placeholder="Tell us what you need..." class="w-full p-3 rounded border border-gray-300"></textarea>
+        <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-full">Send Message</button>
+      </form>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- About -->
-<section id="about" class="py-20 px-6 bg-gray-100 text-center fade-in">
-  <h2 class="text-3xl font-bold mb-6">Who We Are</h2>
-  <p class="max-w-2xl mx-auto text-lg text-gray-700">We’re not just marketers. We're creators, editors, strategists, and meme engineers who know what works online — and what doesn't. If you want growth, let’s make it viral.</p>
-</section>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/91" class="whatsapp-btn">Chat on WhatsApp</a>
 
-<!-- Contact -->
-<section id="contact" class="py-20 px-6 text-center bg-indigo-600 text-white fade-in">
-  <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
-  <p class="mb-6">Fill the form below or DM us on Instagram</p>
-  <form action="https://formsubmit.co/YOUR_EMAIL@gmail.com" method="POST" class="max-w-lg mx-auto bg-white p-6 rounded-xl text-gray-700 shadow space-y-4">
-    <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded border">
-    <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded border">
-    <textarea name="message" rows="4" placeholder="Your Message" required class="w-full p-3 rounded border"></textarea>
-    <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded font-bold hover:bg-indigo-700 transition">Send Message</button>
-  </form>
-</section>
-
-<!-- Footer -->
-<footer class="py-6 text-center text-sm text-gray-500 bg-gray-50">
-  © 2025 Virox Agency. Built with ❤️ on GitHub Pages.
-</footer>
-
-<script>
-  // scroll fade in animation
-  const faders = document.querySelectorAll('.fade-in');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1 });
-
-  faders.forEach(fade => observer.observe(fade));
-</script>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
