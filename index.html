@@ -2,141 +2,112 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Virox Agency</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body {
+      background-color: #0f0f0f;
+      color: #ffffff;
       font-family: 'Segoe UI', sans-serif;
     }
-    .gradient-text {
-      background: linear-gradient(to right, #9D00FF, #FF00A0);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .accent {
+      color: #ffce57;
+    }
+    .btn-primary {
+      background-color: #ffce57;
+      color: #0f0f0f;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #e6b84f;
     }
   </style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="text-white">
 
-<header class="bg-white shadow-md sticky top-0 z-50">
-  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-    <img src="logo.png" alt="Virox Logo" class="h-10" />
+  <!-- Navbar -->
+  <header class="w-full px-6 py-4 flex justify-between items-center bg-black fixed top-0 z-50 shadow-lg">
+    <h1 class="text-2xl font-bold"><span class="accent">Virox</span> Agency</h1>
     <nav class="space-x-6 hidden md:block">
-      <a href="#services" class="text-gray-700 hover:text-purple-600">Services</a>
-      <a href="#pricing" class="text-gray-700 hover:text-purple-600">Pricing</a>
-      <a href="#blog" class="text-gray-700 hover:text-purple-600">Blog</a>
-      <a href="#contact" class="text-gray-700 hover:text-purple-600">Contact</a>
+      <a href="#about" class="hover:text-gray-400">About</a>
+      <a href="#services" class="hover:text-gray-400">Services</a>
+      <a href="#results" class="hover:text-gray-400">Results</a>
+      <a href="#contact" class="hover:text-gray-400">Contact</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<section class="bg-gradient-to-r from-purple-600 via-pink-500 to-magenta-600 text-white text-center py-20" data-aos="fade-down">
-  <h1 class="text-5xl font-extrabold mb-4">Virox Digital Agency</h1>
-  <p class="text-lg max-w-2xl mx-auto">We help businesses go viral online using data-backed strategies, creativity, and performance marketing. Let your brand shine!</p>
-  <a href="#contact" class="inline-block mt-8 px-6 py-3 bg-white text-purple-700 font-semibold rounded-md shadow-md hover:bg-gray-100">Let’s Talk</a>
-</section>
-
-<section class="py-20 bg-gray-50" id="services">
-  <div class="max-w-5xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold mb-12 gradient-text" data-aos="fade-up">What We Do</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div data-aos="fade-up" class="bg-white p-6 rounded-lg shadow hover:shadow-xl">
-        <h3 class="text-xl font-semibold mb-2 text-purple-600">Social Media Growth</h3>
-        <p>We create scroll-stopping content and growth strategies to explode your online presence.</p>
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center px-8 pt-24 text-center bg-gradient-to-b from-black to-gray-900">
+    <div class="max-w-3xl">
+      <h2 class="text-5xl md:text-6xl font-extrabold leading-tight">
+        We Don’t Run Ads.<br />
+        <span class="accent">We Build Brands.</span>
+      </h2>
+      <p class="mt-6 text-lg text-gray-300">Virox helps business owners scale to 6 & 7 figures through ROI-focused digital marketing. We don’t do guesswork. We do performance.</p>
+      <a href="#contact" class="btn-primary mt-10 inline-block">Book a Free Strategy Call</a>
+    </div>
+  </section>
+<!-- Services Section -->
+<section id="services" class="py-20 px-6 bg-gray-950">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-4">What We Do</h2>
+    <p class="text-gray-400 mb-12">We're not your typical agency. We focus on performance, not pretty promises.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transform transition">
+        <h3 class="text-xl font-semibold accent mb-3">Paid Ads</h3>
+        <p class="text-sm text-gray-400">We create laser-targeted ad campaigns on Facebook, Instagram, and Google that generate real ROI.</p>
       </div>
-      <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-6 rounded-lg shadow hover:shadow-xl">
-        <h3 class="text-xl font-semibold mb-2 text-pink-600">Performance Ads</h3>
-        <p>We run ROI-driven ads that convert clicks into customers across Meta, Google & more.</p>
+      <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transform transition">
+        <h3 class="text-xl font-semibold accent mb-3">Funnel Building</h3>
+        <p class="text-sm text-gray-400">High-converting landing pages designed to turn cold traffic into paying customers.</p>
       </div>
-      <div data-aos="fade-up" data-aos-delay="200" class="bg-white p-6 rounded-lg shadow hover:shadow-xl">
-        <h3 class="text-xl font-semibold mb-2 text-magenta-600">Brand Identity</h3>
-        <p>We design bold branding, logos, and messaging that your audience remembers forever.</p>
+      <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transform transition">
+        <h3 class="text-xl font-semibold accent mb-3">Email + Retargeting</h3>
+        <p class="text-sm text-gray-400">We don’t just bring leads. We follow up, nurture, and close them for you.</p>
       </div>
     </div>
   </div>
 </section>
-
-<section class="py-20 bg-white" id="pricing">
-  <div class="max-w-5xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold mb-12 gradient-text" data-aos="fade-up">Our Packages</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div data-aos="zoom-in" class="border p-6 rounded-lg shadow-md">
-        <h3 class="text-xl font-bold mb-2 text-purple-600">Starter</h3>
-        <p class="text-4xl font-bold mb-4">₹4,999</p>
-        <ul class="text-left mb-4 space-y-2">
-          <li>✅ 5 Custom Posts</li>
-          <li>✅ Basic Growth Strategy</li>
-          <li>✅ 1 Ad Campaign</li>
-        </ul>
-        <a href="#contact" class="block bg-purple-600 text-white py-2 rounded hover:bg-purple-700">Get Started</a>
-      </div>
-      <div data-aos="zoom-in" data-aos-delay="100" class="border p-6 rounded-lg shadow-md bg-gray-50">
-        <h3 class="text-xl font-bold mb-2 text-pink-600">Pro</h3>
-        <p class="text-4xl font-bold mb-4">₹9,999</p>
-        <ul class="text-left mb-4 space-y-2">
-          <li>✅ 12 Custom Posts</li>
-          <li>✅ Full Growth Plan</li>
-          <li>✅ 3 Ad Campaigns</li>
-        </ul>
-        <a href="#contact" class="block bg-pink-600 text-white py-2 rounded hover:bg-pink-700">Get Pro</a>
-      </div>
-      <div data-aos="zoom-in" data-aos-delay="200" class="border p-6 rounded-lg shadow-md">
-        <h3 class="text-xl font-bold mb-2 text-magenta-600">Premium</h3>
-        <p class="text-4xl font-bold mb-4">₹14,999</p>
-        <ul class="text-left mb-4 space-y-2">
-          <li>✅ Unlimited Posts</li>
-          <li>✅ Dedicated Manager</li>
-          <li>✅ Paid Ad Mastery</li>
-        </ul>
-        <a href="#contact" class="block bg-magenta-600 text-white py-2 rounded hover:bg-magenta-700">Go Premium</a>
-      </div>
-    </div>
+<!-- Call to Action Section -->
+<section id="contact" class="py-24 px-6 bg-gradient-to-r from-purple-900 to-pink-800 text-center text-white">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-4xl font-bold mb-4">Ready to Scale?</h2>
+    <p class="mb-8 text-lg">If you're serious about growing your business — we’re ready to make it happen.</p>
+    <a href="mailto:contact@viroxagency.com" class="bg-white text-black font-bold py-3 px-8 rounded-lg shadow hover:bg-gray-200 transition-all duration-200">Book Your Free Strategy Call</a>
   </div>
 </section>
 
-<section class="py-20 bg-gray-100" id="blog">
-  <div class="max-w-4xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold mb-8 gradient-text" data-aos="fade-up">Our Insights</h2>
-    <div class="space-y-8">
-      <div data-aos="fade-right">
-        <h3 class="text-xl font-semibold text-purple-700">📈 Why Every Local Business Needs a Strong Online Presence</h3>
-        <p class="text-gray-700 mt-2">Digital visibility is no longer optional. We break down how even small businesses can dominate online.</p>
-      </div>
-      <div data-aos="fade-left">
-        <h3 class="text-xl font-semibold text-pink-700">🎯 Growth Hacks That Actually Work in 2025</h3>
-        <p class="text-gray-700 mt-2">Tired of fake strategies? Here’s our proven 3-step formula to 10x reach organically.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="bg-white py-16" id="contact">
-  <div class="max-w-2xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-10 gradient-text" data-aos="fade-up">Let’s Grow Together</h2>
-    <form action="https://formsubmit.co/YOUR-EMAIL-HERE" method="POST" class="space-y-4" data-aos="fade-up" data-aos-delay="100">
-      <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-2 border rounded-md">
-      <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-2 border rounded-md">
-      <textarea name="message" placeholder="Your Message" rows="5" required class="w-full px-4 py-2 border rounded-md"></textarea>
-      <button type="submit" class="bg-purple-600 text-white px-6 py-2 rounded-md hover:bg-purple-700">Send Message</button>
-    </form>
-  </div>
-</section>
-
-<a href="https://wa.me/919876543210" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg z-50 hover:bg-green-600" target="_blank">
-  💬
-</a>
-
-<footer class="bg-gray-900 text-white py-6 text-center">
+<!-- Footer -->
+<footer class="bg-black py-6 px-4 text-center text-gray-500 text-sm">
   <p>&copy; 2025 Virox Agency. All rights reserved.</p>
+  <p>Made with ⚡ by Virox Team</p>
 </footer>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,
-    once: true,
-  });
-</script>
-</body>
-</html>
+<!-- Tailwind CDN for live preview -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Results Section -->
+<section id="results" class="py-20 px-6 bg-black">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-4">Proven Results</h2>
+    <p class="text-gray-400 mb-10">We’ve scaled brands from scratch to ₹10L+ per month — without burning ad spend.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+      <div class="bg-gray-900 p-5 rounded-lg shadow">
+        <h4 class="text-xl accent mb-2">Fitness Brand</h4>
+        <p class="text-gray-400 text-sm">From ₹0 to ₹6L/month in 90 days with paid ads + content funnel.</p>
+      </div>
+      <div class="bg-gray-900 p-5 rounded-lg shadow">
+        <h4 class="text-xl accent mb-2">Online Coach</h4>
+        <p class="text-gray-400 text-sm">4X ROAS from organic + retargeting strategy in 60 days.</p>
+      </div>
+      <div class="bg-gray-900 p-5 rounded-lg shadow">
+        <h4 class="text-xl accent mb-2">Local Gym</h4>
+        <p class="text-gray-400 text-sm">Generated 120+ leads in 30 days with a lead-gen funnel and follow-up system.</p>
+      </div>
+    </div>
+  </div>
+</section>
